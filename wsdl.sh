@@ -1,7 +1,11 @@
 #!/bin/bash
 
+if [ ! -x gowsdl ]; then
+    go get -u github.com/hooklift/gowsdl/...
+fi
+
 export PATH="$PATH:$1/bin"
-export version="v201802"
+export version="v201809"
 mkdir -p $version
 cd $version
 for url in \
